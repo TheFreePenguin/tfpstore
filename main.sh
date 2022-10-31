@@ -21,7 +21,7 @@ elif [ $REPLY = 2 ] then
   if [ $CLEAN = n ] then
     pkexec apt remove $TARGET
   else
-    pkexec bash cleanup.sh
+    pkexec bash cleanup.sh $TARGET
   fi
 elif [ $REPLY = 3 ] then
   pkexec apt upgrade
