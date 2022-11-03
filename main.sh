@@ -1,4 +1,4 @@
-echo "Press ENTER to start TFP Apt Store v2.0_02."
+echo "Press ENTER to start TFP Apt Store v2.0_03."
 read
 FIRSTTIME=true
 echo "Checking for updates..."
@@ -8,7 +8,7 @@ clear
 while true; do
 if [ FIRSTTIME = true ]; then
   echo "Repos refreshed! Select an option."
-else;
+else
   echo "Select an option."
 fi
 echo "1. Install a package"
