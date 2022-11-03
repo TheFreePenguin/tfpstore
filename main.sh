@@ -1,11 +1,16 @@
-echo "Press ENTER to start TFP Apt Store v2.0_01."
+echo "Press ENTER to start TFP Apt Store v2.0_02."
 read
+FIRSTTIME=true
 echo "Checking for updates..."
 set -e
 sudo apt update
 clear
 while true; do
-echo "Repos refreshed! Select an option."
+if [ FIRSTTIME = true ]; then
+  echo "Repos refreshed! Select an option."
+else;
+  echo "Select an option."
+fi
 echo "1. Install a package"
 echo "2. Remove a package"
 echo "3. Install updates"
@@ -13,6 +18,7 @@ echo "4. Clean up packages"
 echo "99. Exit"
 echo "This APT Store has 500per cow powers."
 read -i "Enter your option here "
+FIRSTTIME=false
 if [ $REPLY = 1 ]; then
   echo "Enter the package(s) you wish to install."
   read TARGET
