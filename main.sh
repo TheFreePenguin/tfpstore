@@ -9,6 +9,7 @@ echo "1. Install a package"
 echo "2. Remove a package"
 echo "3. Install updates"
 echo "4. Clean up packages"
+echo "99. Exit"
 echo "This APT Store has 500per cow powers."
 read -i "Enter your option here "
 while true; do
