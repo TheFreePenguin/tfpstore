@@ -1,7 +1,7 @@
 FIRSTTIME=true
 echo "Checking for updates..."
 set -e
-sudo apt update
+apt update
 clear
 while true; do
 if [ FIRSTTIME = true ]; then
@@ -26,20 +26,20 @@ FIRSTTIME=false
 if [ $REPLY = 1 ]; then
   echo "Enter the package(s) you wish to install."
   read TARGET
-  sudo apt install $TARGET
+  apt install $TARGET
 elif [ $REPLY = 2 ]; then
   echo "Enter the package(s) you wish to remove."
   read TARGET
   echo "Do you wish to clean up after? [y/N]"
   read CLEAN
-  sudo apt remove $TARGET
+  apt remove $TARGET
   if [ $CLEAN = y ]; then
-    sudo apt autoremove
+    apt autoremove
   fi
 elif [ $REPLY = 3 ]; then
-  sudo apt upgrade
+  apt upgrade
 elif [ $REPLY = 4 ]; then
-  sudo apt autoremove
+  apt autoremove
 elif [ $REPLY = 10 ] && which flatpak; then
   bash flatpak.sh
 elif [ $REPLY = 11 ] && which snap; then
