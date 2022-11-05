@@ -11,7 +11,7 @@ fi
 echo "Detecting OS..."
 source /etc/os-release
 echo "Your OS is ${ID}."
-if [ ID_LIKE = "ubuntu" ] || [ ID_LIKE = "debian" ]; then
+if [ ID_LIKE = "ubuntu" ] || [ ID_LIKE = "debian" ] || [ ID = "debian" ] || [ ID = "ubuntu" ]; then
   exec `echo $SUDO` bash debian.sh
 else
   echo "Your OS is not supported at this time."
