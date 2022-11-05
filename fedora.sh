@@ -22,7 +22,6 @@ if which snap; then
   echo "11. Go to snap management"
 fi
 echo "99. Exit"
-echo "This APT Store has 500per cow powers."
 read -i "Enter your option here "
 FIRSTTIME=false
 if [ $REPLY = 1 ]; then
