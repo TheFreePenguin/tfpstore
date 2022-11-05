@@ -11,8 +11,10 @@ fi
 echo "Detecting OS..."
 source /etc/os-release
 echo "Your OS is ${ID}."
-if [ ID_LIKE = "ubuntu" ] || [ ID_LIKE = "debian" ] || [ ID = "debian" ] || [ ID = "ubuntu" ]; then
+if echo $ID_LIKE | grep ubuntu || echo $ID_LIKE | grep debian || [ ID = "debian" ] || [ ID = "ubuntu" ]; then
   exec `echo $SUDO` bash debian.sh
+elif echo $ID_LIKE | grep fedora || echo $ID_LIKE | grep rhel || [ ID = "fedora" ] || [ ID = "rhel" ]; then
+  exec `echo $SUDO` bash fedora.sh
 else
   echo "Your OS is not supported at this time."
 fi
