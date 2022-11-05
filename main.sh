@@ -1,4 +1,4 @@
-echo "TFPStore v3.0 Beta 1"
+echo "TFPStore v3.0 Beta 2"
 echo "Checking for sudo privileges..."
 if sudo true; then
   SUDO="sudo"
