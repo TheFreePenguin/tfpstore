@@ -1,14 +1,5 @@
-FIRSTTIME=true
-echo "Checking for updates..."
-set -e
-apt update
-clear
 while true; do
-if [ FIRSTTIME = true ]; then
-  echo "Repos refreshed! Select an option."
-else
-  echo "Select an option."
-fi
+echo "You are currently in snap mode."
 echo "1. Install a package"
 echo "2. Remove a package"
 echo "3. Install updates"
