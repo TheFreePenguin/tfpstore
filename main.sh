@@ -15,7 +15,7 @@ if echo $ID_LIKE | grep ubuntu || echo $ID_LIKE | grep debian || [ $ID = "debian
   exec `echo $SUDO` bash debian.sh
 elif echo $ID_LIKE | grep fedora || echo $ID_LIKE | grep rhel || [ $ID = "fedora" ] || [ $ID = "rhel" ]; then
   exec `echo $SUDO` bash fedora.sh
-elif echo $ID_LIKE | grep arch || [ $ID = "arch" ]
+elif echo $ID_LIKE | grep arch || [ $ID = "arch" ]; then
   exec `echo $SUDO` bash arch.sh
 else
   echo "Your OS is not supported at this time."
