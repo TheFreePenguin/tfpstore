@@ -1,4 +1,4 @@
-echo "TFPStore v3.0 Beta 2"
+echo "TFPStore v3.0 Beta 3"
 echo "Checking for sudo privileges..."
 if sudo true; then
   SUDO="sudo"
@@ -15,6 +15,8 @@ if echo $ID_LIKE | grep ubuntu || echo $ID_LIKE | grep debian || [ $ID = "debian
   exec `echo $SUDO` bash debian.sh
 elif echo $ID_LIKE | grep fedora || echo $ID_LIKE | grep rhel || [ $ID = "fedora" ] || [ $ID = "rhel" ]; then
   exec `echo $SUDO` bash fedora.sh
+elif echo $ID_LIKE | grep arch || [ $ID = "arch" ]
+  exec `echo $SUDO` bash arch.sh
 else
   echo "Your OS is not supported at this time."
 fi
