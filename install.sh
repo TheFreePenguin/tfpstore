@@ -8,7 +8,7 @@ install(){
   rm /usr/local/share/aptstore/install.sh
   echo "Creating executable binary"
   echo "cd /usr/local/share/aptstore; bash main.sh" > /usr/local/bin/aptstore
-  chmod 755 /usr/local/share/aptstore
+  chmod 755 /usr/local/bin/aptstore
   echo "Creating uninstall binary"
   echo "echo \"Uninstalling Aptstore...\"; rm -r /usr/local/share/aptstore; rm /usr/local/bin/aptstore; rm /usr/local/bin/aptstore-uninst" > /usr/local/bin/aptstore-uninst
   echo "Aptstore can now be called by running \"aptstore\" in the terminal. To uninstall Aptstore, run \"aptstore-uninst\""
