@@ -16,7 +16,7 @@ install(){
 
 
 echo "Checking for root priviliges..."
-if [ $UID = 0 ]
+if [ $UID = 0 ]; then
   echo "You are root. Continuing..."
   install
 else
