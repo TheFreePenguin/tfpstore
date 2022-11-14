@@ -11,7 +11,7 @@ install(){
   chmod 755 /usr/local/share/aptstore
   echo "Creating uninstall binary"
   echo "echo \"Uninstalling Aptstore...\"; rm -r /usr/local/share/aptstore; rm /usr/local/bin/aptstore; rm /usr/local/bin/aptstore-uninst" > /usr/local/bin/aptstore-uninst
-  echo "Aptstore can now be called by running \"aptstore\" in the terminal. To uninstall Aptstore, run \"aptstore-uninst\"
+  echo "Aptstore can now be called by running \"aptstore\" in the terminal. To uninstall Aptstore, run \"aptstore-uninst\""
 }
 
 
