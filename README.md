@@ -8,4 +8,5 @@ Ubuntu<br>
 Red Hat<br>
 Fedora<br>
 Arch<br>
+openSUSE (not tested yet)<br>
 Note: The AUR is currently unsupported.
