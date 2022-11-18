@@ -17,6 +17,8 @@ elif echo $ID_LIKE | grep fedora || echo $ID_LIKE | grep rhel || [ $ID = "fedora
   exec `echo $SUDO` bash fedora.sh
 elif echo $ID_LIKE | grep arch || [ $ID = "arch" ]; then
   exec `echo $SUDO` bash arch.sh
+elif echo $ID_LIKE | grep suse || [ $ID = "suse" ]; then
+  exec `echo $SUDO` bash lizard.sh
 else
   echo "Your OS is not supported at this time."
 fi
