@@ -1,7 +1,7 @@
 install(){
   set -e
   echo "Creating install directory"
-  mkdir /usr/local/share/aptstore
+  mkdir /usr/local/share/aptstore -p
   echo "Copying files"
   cp *.sh /usr/local/share/aptstore
   echo "Removing unneeded files"
