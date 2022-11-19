@@ -2,7 +2,7 @@ echo "TFPStore v3.0 Beta 3"
 echo "Checking for sudo privileges..."
 if sudo true; then
   SUDO="sudo"
-elif [ $UID = "root" ]
+elif [ $UID = "0" ]
 then
   SUDO=""
 else
