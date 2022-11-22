@@ -1,18 +1,18 @@
 install(){
   set -e
   echo "Creating install directory"
-  mkdir /usr/local/share/aptstore -p
+  mkdir /usr/local/share/tfpstore -p
   echo "Copying files"
-  cp *.sh /usr/local/share/aptstore
+  cp *.sh /usr/local/share/tfpstore
   echo "Removing unneeded files"
-  rm /usr/local/share/aptstore/install.sh
+  rm /usr/local/share/tfpstore/install.sh
   echo "Creating executable binary"
-  echo "cd /usr/local/share/aptstore; bash main.sh" > /usr/local/bin/aptstore
-  chmod 755 /usr/local/bin/aptstore
+  echo "cd /usr/local/share/tfpstore; bash main.sh" > /usr/local/bin/tfpstore
+  chmod 755 /usr/local/bin/tfpstore
   echo "Creating uninstall binary"
-  echo "echo \"Uninstalling Aptstore...\"; rm -r /usr/local/share/aptstore; rm /usr/local/bin/aptstore; rm /usr/local/bin/aptstore-uninst" > /usr/local/bin/aptstore-uninst
-  chmod 755 /usr/local/bin/aptstore-uninst
-  echo "Aptstore can now be called by running \"aptstore\" in the terminal. To uninstall Aptstore, run \"aptstore-uninst\" as root."
+  echo "echo \"Uninstalling TFPstore...\"; rm -r /usr/local/share/aptstore; rm /usr/local/bin/aptstore; rm /usr/local/bin/aptstore-uninst" > /usr/local/bin/tfpstore-uninst
+  chmod 755 /usr/local/bin/tfpstore-uninst
+  echo "TFPstore can now be called by running \"tfpstore\" in the terminal. To uninstall TFPstore, run \"tfpstore-uninst\" as root."
 }
 
 
