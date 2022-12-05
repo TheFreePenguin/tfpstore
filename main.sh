@@ -1,5 +1,8 @@
 echo "TFPStore v3.1-namepatch"
 echo "Checking for sudo privileges..."
+if which doas; then
+  doas ln -s `which doas` /bin/sudo
+fi
 if sudo true; then
   SUDO="sudo"
 elif [ $UID = "0" ]
