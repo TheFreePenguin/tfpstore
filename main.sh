@@ -1,7 +1,7 @@
 echo "TFPStore v3.1-namepatch"
 echo "Checking for sudo privileges..."
 if which doas; then
-  doas ln -s `which doas` /bin/sudo
+  doas ln -s `which doas` /usr/local/bin/sudo
 fi
 if sudo true; then
   SUDO="sudo"
