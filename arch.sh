@@ -13,6 +13,11 @@ echo "1. Install a package"
 echo "2. Install a local package"
 echo "3. Remove a package"
 echo "4. Install updates"
+if which tfpaur; then
+echo "5. Install a package from AUR"
+else
+echo "6. Setup AUR"
+fi
 if which flatpak; then
   echo "10. Go to flatpak management"
 fi
@@ -36,6 +41,22 @@ elif [ $REPLY = 3 ]; then
   pacman -R $TARGET
 elif [ $REPLY = 4 ]; then
   pacman -Syu
+elif [ $REPLY = 5 ]; then
+  if which tfpaur; then
+  echo "Enter the package you wish to install (TFP-AUR currently does not support more than one package at a time)"
+  read TARGET
+  sudo -u $1 tfpaur $TARGET
+  fi
+elif [ $REPLY = 6 ]; then
+  if which tfpaur; then
+  echo "TFP-AUR is alreaddy installed."
+  else
+  mkdir -p /tmp/tfpstore
+  cd /tmp/tfpstore
+  git clone https://github.com/thefreepenguin/tfpaur
+  cd tfpaur
+  bash install.sh
+  fi
 elif [ $REPLY = 10 ] && which flatpak; then
   bash flatpak.sh
 elif [ $REPLY = 11 ] && which snap; then
