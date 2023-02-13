@@ -8,6 +8,7 @@ if which doas; then
   doas ln -s `which doas` /usr/local/bin/sudo
   doas chmod +x /usr/local/bin/sudo
 fi
+fi
 if sudo true; then
   SUDO="sudo"
 elif [ $UID = "0" ]
