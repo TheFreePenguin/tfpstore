@@ -1,3 +1,4 @@
+echo "Your name is $1"
 FIRSTTIME=true
 echo "Checking for updates..."
 set -e
