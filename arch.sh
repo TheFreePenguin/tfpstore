@@ -3,6 +3,7 @@ FIRSTTIME=true
 echo "Checking for updates..."
 set -e
 pacman -Sy
+echo "Testing for sudo..."
 while true; do
 if [ FIRSTTIME = true ]; then
   echo "Repos refreshed! Select an option."
@@ -57,6 +58,11 @@ elif [ $REPLY = 6 ]; then
   cd tfpaur
   bash install.sh
   fi
+elif [ $REPLY = 7 ]; then
+  if which tfpaur; then
+  echo "Enter the package you wish to install. TFP-AUR only supports installing one package at a time."
+  read
+  sudo -u $1 tfpaur $REPLY
 elif [ $REPLY = 10 ] && which flatpak; then
   bash flatpak.sh
 elif [ $REPLY = 11 ] && which snap; then
