@@ -3,7 +3,6 @@ FIRSTTIME=true
 echo "Checking for updates..."
 set -e
 pacman -Sy
-clear
 while true; do
 if [ FIRSTTIME = true ]; then
   echo "Repos refreshed! Select an option."
