@@ -1,6 +1,6 @@
 echo "TFPStore Kotry"
 echo "Checking for sudo privileges..."
-$IMJA=`whoami`
+IMJA=`whoami`
 if which doas; then
   if which sudo; then
   true
