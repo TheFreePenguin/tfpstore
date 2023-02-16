@@ -63,6 +63,7 @@ elif [ $REPLY = 7 ]; then
   echo "Enter the package you wish to install. TFP-AUR only supports installing one package at a time."
   read
   sudo -u $1 tfpaur $REPLY
+  fi
 elif [ $REPLY = 10 ] && which flatpak; then
   bash flatpak.sh
 elif [ $REPLY = 11 ] && which snap; then
