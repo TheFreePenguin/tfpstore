@@ -44,9 +44,7 @@ elif [ $REPLY = 4 ]; then
   pacman -Syu
 elif [ $REPLY = 5 ]; then
   if which tfpaur; then
-  echo "Enter the package you wish to install (TFP-AUR currently does not support more than one package at a time)"
-  read TARGET
-  sudo -u $1 tfpaur $TARGET
+  sudo -u $1 tfpaur
   fi
 elif [ $REPLY = 6 ]; then
   if which tfpaur; then
